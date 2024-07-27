@@ -9,10 +9,6 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
@@ -24,14 +20,21 @@
       
       <h1>Stay updated!</h1>
 
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <p class="p-Join">Join 60,000+ product managers receiving monthly updates on:</p>
 
-      <ul>
-        <li><img src="assets/images/icon-list.svg" alt="check icon">Product discovery and building what matters</li>
-        <li><img src="assets/images/icon-list.svg" alt="check icon">Measuring to ensure updates are a success</li>
-        <li><img src="assets/images/icon-list.svg" alt="check icon">And much more!</li>
-      </ul>
-
+      <div class="list">
+        <img src="assets/images/icon-list.svg" alt="check icon">
+        <p class="list-p">Product discovery and building what matters</p>
+      </div>
+      <div class="list">
+        <img src="assets/images/icon-list.svg" alt="check icon">
+        <p>Measuring to ensure updates are a success</p>
+      </div>
+      <div class="list">
+        <img src="assets/images/icon-list.svg" alt="check icon">
+        <p>And much more!</p>
+      </div>
+        
       <form action="">
         <label for="email-form"><b>Email adress</b></label>
         <input type="email" id="email-form" autofocus placeholder="email@company.com">
