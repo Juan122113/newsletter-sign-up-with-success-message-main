@@ -30,6 +30,7 @@ body {
 .illustration {
     height: 285px;
     background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    background-size: cover;
     border-radius: 0 0 10px 10px;
 }
 
@@ -43,16 +44,60 @@ h1 {
 }
 
 .p-Join {
-    padding: 10px 0;
+    padding-top: 0.5em;
+    line-height: 1.4em;
 }
 
 .list {
     display: flex;
+    /* margin: 0; */
+}
+
+.list p {
+    margin: 0.7em 0 0 1em;
+    line-height: 1.4em;
+    /* margin: 0; */
+}
+
+.img-Product {
+    position: relative;
+    bottom: 7px;
+    right: 0.4%;
+}
+
+/* .p-Product {
+    padding-top: 0.8em;
+} */
+
+.img-Measuring {
+    position: relative;
+    bottom: 6px;
+    right: 1px;
+}
+
+.p-Measuring {
+    padding-top: 0.1em;
+}
+
+.img-And {
+    position: relative;
+    top: 6px;
+    right: 1px;
+}
+
+.p-And {
+    padding-top: 0.1em;
 }
 
 /* ul {
     text-decoration: none;
 } */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 
