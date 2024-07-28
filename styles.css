@@ -14,7 +14,7 @@
 @font-face {
     font-family: "Roboto Bold";
     src: url("assets/fonts/Roboto-Bold.ttf");
-}n
+}
 
 html {
     height: 100%;
@@ -155,5 +155,48 @@ button {
 
     .img-Measuring {
         top: 5px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    body {
+        /* position: relative; */
+        background-color: var(--Charcoal-Grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        width: auto;
+        display: flex;
+        padding: 3rem;
+        background-color: var(--White);
+        border-radius: 40px;
+        /* position: relative;
+        bottom: 50%;
+        left: 50%; */
+    }
+
+    .illustration {
+        order: 2;
+        width: 400px;
+        height: auto;
+        /* width: auto; */
+        border-radius: 10px 10px 10px 0px;
+    }
+
+    section {
+        order: 1;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0%;
     }
 }
