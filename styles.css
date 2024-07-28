@@ -169,9 +169,10 @@ button {
     }
 
     main {
-        width: auto;
+        /* width: auto; */
         display: flex;
-        padding: 3rem;
+        /* margin: 250px; */
+        /* padding: 1.3rem 1.7rem; */
         background-color: var(--White);
         border-radius: 40px;
         /* position: relative;
@@ -180,23 +181,32 @@ button {
     }
 
     .illustration {
-        order: 2;
+        background-image: url("assets/images/illustration-sign-up-desktop.svg");
+        order: 1;
         width: 400px;
-        height: auto;
+        height: 600px;
         /* width: auto; */
-        border-radius: 10px 10px 10px 0px;
+        margin-left: 2rem;
+        margin: 2rem 2rem 2rem 0;
+        border-radius: 10px;
     }
 
     section {
-        order: 1;
+        /* order: 1; */
+        padding: 3rem;
+        /* margin: 0rem 0rem; */
+        /* gap: 1rem; */
+
     }
 
     h1 {
         font-size: 4rem;
+        /* padding-top: 3rem; */
     }
 
     .attribution {
         position: absolute;
         bottom: 0%;
+        /* display: none; */
     }
 }
