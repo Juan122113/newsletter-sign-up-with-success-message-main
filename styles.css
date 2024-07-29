@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --Tomato: hsl(4, 100%, 67%);
     --Dark-Slate-Grey: hsl(234, 29%, 20%);
@@ -169,10 +174,10 @@ button {
     }
 
     main {
-        /* width: auto; */
+        width: 925px;
         display: flex;
         /* margin: 250px; */
-        /* padding: 1.3rem 1.7rem; */
+        padding: 1.3rem 1.2rem 1.3rem 2.5rem;
         background-color: var(--White);
         border-radius: 40px;
         /* position: relative;
@@ -183,25 +188,38 @@ button {
     .illustration {
         background-image: url("assets/images/illustration-sign-up-desktop.svg");
         order: 1;
-        width: 400px;
+        width: 50%;
         height: 600px;
         /* width: auto; */
-        margin-left: 2rem;
-        margin: 2rem 2rem 2rem 0;
+        /* margin-left: 2rem; */
+        /* margin: 0.8rem 0.4rem 0.8rem 0.5rem; */
         border-radius: 10px;
+        /* padding: 2rem; */
     }
 
     section {
         /* order: 1; */
-        padding: 3rem;
-        /* margin: 0rem 0rem; */
+        /* padding: 2rem; */
+        /* margin: 0rem 1rem; */
         /* gap: 1rem; */
 
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         /* padding-top: 3rem; */
+        /* margin: 3rem 0 0 1rem; */
+    }
+
+    .p-Join {
+        padding: 0;
+        /* padding-right: 1rem; */
+        /* margin: 1.5rem 0rem 2.3rem 2rem; */
+        
+    }
+
+    .list{
+        /* margin-left: 3rem; */
     }
 
     .attribution {
