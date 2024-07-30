@@ -31,6 +31,7 @@ body {
     margin: 0; 
     font-size: 16px;
     font-family: "Roboto regular";
+    position: relative;
 }
 
 /* main {
@@ -153,7 +154,13 @@ button {
     font-size: 1rem;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+    font-size: 0.8rem; text-align: center; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -185,9 +192,10 @@ button {
         padding: 1.3rem 1.2rem 1.3rem 2.5rem;
         background-color: var(--White);
         border-radius: 40px;
-        /* position: relative;
-        bottom: 50%;
-        left: 50%; */
+        /* position: relative; */
+        /* bottom: 50%; */
+        /* left: 10.5%; */
+
     }
 
     .illustration {
@@ -237,14 +245,15 @@ button {
     }
 
     .attribution {
-        position: relative;
+        /* position: absolute; */
         /* right: 300px; */
-        left: -300px;
-        top: 500px;
-        /* bottom: 10px; */
-        color: var(--White);
+        /* left: -31%; */
+        /* top: 530px; */
+        /* bottom: 0; */
+        color: var(--Tomato);
         /* display: none; */
+        /* z-index: 5; */
     }
 
-    .attribution a { color: var(--Tomato); }
+    .attribution a { color: var(--Grey); }
 }
