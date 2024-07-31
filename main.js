@@ -6,11 +6,13 @@ function handleSubmit(e) {
 
     e.preventDefault()
 
-    if ((/\w+\W+@\w+\W+/).test(e)) {
-        window.location.href = "success.html"
-        alert(true);
+    console.log(e);
+
+    if ((/(^\W+)(\w+)@/i).test(e)) {
+        alert("false")
     } else {
-        
+        window.location.href = "success.html"
+        alert("true");
     }
     // const data = Object.fromEntries(new FormData(e.target));
 
