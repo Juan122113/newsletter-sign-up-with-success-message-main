@@ -5,17 +5,25 @@ const bValid = document.getElementById("b-Valid-id");
 let bValidDisplay = bValid.getAttribute("display");
 let bValidStyle = window.getComputedStyle(bValid);
 
+emailForm.addEventListener("invalid", (e) => {
+    bValid.style.display = "block";
+})
+
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
+    
+
     if (emailForm.checkValidity()) {
         window.location.href = "success.html"
         console.log("true");
-    } else if (emailForm.checkValidity() == false){
-        bValid.style.display = "block";
-        console.log("false");
-    }
+      } // else {
+    //     bValid.style.display = "block";
+    //  }//else if (emailForm.checkValidity() == "invalid"){
+    //     bValid.style.display = "block";
+    //     console.log("false");
+    // }
 
 })
 
