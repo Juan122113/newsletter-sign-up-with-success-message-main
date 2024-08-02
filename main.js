@@ -7,8 +7,30 @@ let bValidStyle = window.getComputedStyle(bValid);
 
 emailForm.addEventListener("invalid", (e) => {
     bValid.style.display = "block";
+    emailForm.style.borderColor = "var(--Tomato)";
+    emailForm.style.color = "var(--Tomato)";
+    emailForm.style.backgroundColor = "hsla(4, 100%, 67%, 0.170)";
+    // console.log(emailForm.autofocus);
+    // if (!(emailForm.autofocus)) {
+    //     bValid.style.display = "block";
+    // // emailForm.textContent = "";
+    // } else {
+    //     bValid.style.display = "none";
+    //}
+    
 })
 
+emailForm.addEventListener('focus', function() {
+    console.log('El campo de email tiene el foco.');
+    bValid.style.display = "none";
+    emailForm.style.borderColor = "var(--Grey)";
+    emailForm.style.color = "var(--Dark-Slate-Grey)";
+    emailForm.style.backgroundColor = "white";
+});
+
+emailForm.addEventListener('blur', function() {
+    console.log('El campo de email ha perdido el foco.');
+});
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
