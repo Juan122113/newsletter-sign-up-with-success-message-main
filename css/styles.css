@@ -13,12 +13,12 @@
 
 @font-face {
     font-family: "Roboto regular";
-    src: url("assets/fonts/Roboto-Regular.ttf");
+    src: url("/assets/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
     font-family: "Roboto Bold";
-    src: url("assets/fonts/Roboto-Bold.ttf");
+    src: url("/assets/fonts/Roboto-Bold.ttf");
 }
 
 html {
@@ -213,7 +213,8 @@ button:hover {
     }
 
     main {
-        width: 925px;
+        width: 57.8rem;
+        max-width: 90%;
         display: flex;
         /* margin: 250px; */
         padding: 1.3rem 1.2rem 1.3rem 2.5rem;
