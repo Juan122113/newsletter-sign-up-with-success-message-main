@@ -4,6 +4,7 @@ let button = document.getElementById("button");
 const bValid = document.getElementById("b-Valid-id");
 let bValidDisplay = bValid.getAttribute("display");
 let bValidStyle = window.getComputedStyle(bValid);
+let bEmailAdress = document.getElementById("email-adress");
 
 emailForm.addEventListener("invalid", (e) => {
     bValid.style.display = "block";
@@ -28,14 +29,12 @@ emailForm.addEventListener('focus', function() {
     emailForm.style.backgroundColor = "white";
 });
 
-emailForm.addEventListener('blur', function() {
-    console.log('El campo de email ha perdido el foco.');
-});
+// emailForm.addEventListener('blur', function() {
+//     console.log('El campo de email ha perdido el foco.');
+// });
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-
-    
 
     if (emailForm.checkValidity()) {
         window.location.href = "success.html"
@@ -48,6 +47,12 @@ form.addEventListener('submit', function(event) {
     // }
 
 })
+
+// function subscribeAndDisplay() {
+//     if (emailForm) {
+//         bEmailAdress.textContent = `${emailForm}`;
+//     }
+// }
 
 
 // function handleSubmit(e) {
