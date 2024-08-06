@@ -4,7 +4,13 @@ let button = document.getElementById("button");
 const bValid = document.getElementById("b-Valid-id");
 let bValidDisplay = bValid.getAttribute("display");
 let bValidStyle = window.getComputedStyle(bValid);
-let bEmailAdress = document.getElementById("email-adress");
+const emailValue = document.getElementById("email-form").value;
+
+
+window.onload = function() {
+    sessionStorage.removeItem('emailAdrStor');
+    
+}
 
 emailForm.addEventListener("invalid", (e) => {
     bValid.style.display = "block";
@@ -34,6 +40,7 @@ emailForm.addEventListener('focus', function() {
 // });
 
 form.addEventListener('submit', function(event) {
+    console.log(emailValue);
     event.preventDefault();
 
     if (emailForm.checkValidity()) {
@@ -45,6 +52,8 @@ form.addEventListener('submit', function(event) {
     //     bValid.style.display = "block";
     //     console.log("false");
     // }
+
+    sessionStorage.setItem('emailAdrStor', emailValue);
 
 })
 
