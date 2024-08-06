@@ -23,21 +23,15 @@
 
 html {
     height: 100%;
-    /* margin: 0; */
 }
 
 body {
     min-height: 100vh;
-    /* margin: 0;  */
     font-size: 16px;
     font-family: "Roboto regular";
     position: relative;
     color: var(--Dark-Slate-Grey);
 }
-
-/* main {
-    height: 100%;
-} */
 
 .illustration {
     height: 285px;
@@ -54,7 +48,6 @@ h1 {
     font-size: 2.4rem;
     font-family: "Roboto Bold";
     margin: 0;
-    /* font-weight: 100; */
 }
 
 .p-Join {
@@ -64,13 +57,11 @@ h1 {
 
 .list {
     display: flex;
-    /* margin: 0; */
 }
 
 .list p {
     margin: 0.7em 0 0 1em;
     line-height: 1.4em;
-    /* margin: 0; */
 }
 
 .img-Product {
@@ -78,10 +69,6 @@ h1 {
     bottom: 7px;
     right: 0.4%;
 }
-
-/* .p-Product {
-    padding-top: 0.8em;
-} */
 
 .img-Measuring {
     position: relative;
@@ -103,10 +90,6 @@ h1 {
     padding-top: 0.1em;
 }
 
-/* ul {
-    text-decoration: none;
-} */
-
 form {
     display: flex;
     flex-direction: column;
@@ -114,12 +97,9 @@ form {
 }
 
 label {
-    /* margin: 0; */
     font-family: "Roboto Bold";
     font-size: 0.72rem;
     padding-bottom: 0.7rem;
-    /* color: var(--Dark-Slate-Grey); */
-    /* font-weight: 900; */
     display: flex;
     justify-content: space-between;
 }
@@ -138,26 +118,43 @@ input {
     /* background-color: hsla(4, 100%, 67%, 0.170); */
 }
 
-/* input:hover {
-    pointer-events: auto;
-} */
-
 input::placeholder {
-    /* padding-left: 2rem; */
     font-size: 1.02rem;
     color: var(--Charcoal-Grey);
 }
 
 input:focus {
-    /* border-color: black; */
     outline: none;
 }
 
+/* Estilos para anular el autocompletado
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+Estilos adicionales para otros navegadores
+input:autofill,
+input:autofill:hover, 
+input:autofill:focus,
+input:autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: inherit !important;
+} */
+
+/* Mantener estilo de borde personalizado */
+input:-webkit-autofill:focus,
+input:autofill:focus {
+    border-color: var(--Grey) !important;
+}
+
 button {
-    /* width: 100%; */
     height: 3.7rem;
     margin-top: 1.4rem;
-    /* padding-top: 2rem; */
     background-color: var(--Dark-Slate-Grey);
     color: var(--White);
     border: none;
@@ -167,17 +164,8 @@ button {
     cursor: pointer;
 }
 
-/* button::before {
-    content: "";
-    background-image: url("assets/images/illustration-sign-up-mobile.svg");
-} */
-
 button:hover {
-    /* background-color: linear-gradient(to left, --Tomato, hsl(321, 100%, 67%)); */
     background-image: linear-gradient(to left, hsl(20, 100%, 57%), hsl(337, 100%, 67%));
-    /* background-size: cover; */
-    /* background-position: left 70px top 80%; */
-    /* transform: rotate(30deg); */
 }
 
 .attribution { 
@@ -205,7 +193,6 @@ button:hover {
 @media (min-width: 768px) {
 
     body {
-        /* position: relative; */
         background-color: var(--Charcoal-Grey);
         display: flex;
         align-items: center;
@@ -216,13 +203,9 @@ button:hover {
         width: 57.8rem;
         max-width: 90%;
         display: flex;
-        /* margin: 250px; */
         padding: 1.3rem 1.2rem 1.3rem 2.5rem;
         background-color: var(--White);
         border-radius: 40px;
-        /* position: relative; */
-        /* bottom: 50%; */
-        /* left: 10.5%; */
 
     }
 
@@ -231,38 +214,26 @@ button:hover {
         order: 1;
         width: 55%;
         height: 600px;
-        /* width: auto; */
-        /* margin-left: 2rem; */
-        /* margin: 0.8rem 0.4rem 0.8rem 0.5rem; */
         border-radius: 10px;
-        /* padding: 2rem; */
     }
 
     section {
-        /* order: 1; */
         padding: 2rem 4rem 0 1.5rem;
-        /* margin: 0rem 1rem; */
-        /* gap: 1rem; */
-
     }
 
     h1 {
         font-size: 3.35rem;
         padding-top: 2.2rem;
-        /* margin: 3rem 0 0 1rem; */
     }
 
     .p-Join {
         padding: 0;
-        /* padding-right: 1rem; */
-        /* margin: 1.5rem 0rem 2.3rem 2rem; */
         position: relative;
         top: 4%;
         
     }
 
     .list{
-        /* margin-left: 3rem; */
         position: relative;
         top: 7%;
     }
@@ -273,14 +244,7 @@ button:hover {
     }
 
     .attribution {
-        /* position: absolute; */
-        /* right: 300px; */
-        /* left: -31%; */
-        /* top: 530px; */
-        /* bottom: 0; */
         color: var(--Tomato);
-        /* display: none; */
-        /* z-index: 5; */
     }
 
     .attribution a { color: var(--Grey); }

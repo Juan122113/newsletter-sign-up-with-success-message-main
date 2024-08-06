@@ -1,13 +1,15 @@
 let bEmailAdress = document.getElementById("email-adress");
+let emailAdrStorVar = sessionStorage.getItem('emailAdrStor');
 
-document.addEventListener('DOMContentLoaded', () => {
-    bEmailAdress.textContent = sessionStorage.getItem('emailAdrStor');
+
+
+console.log(bEmailAdress);
+console.log(emailAdrStorVar);
     
-})
+window.onload = function() {
+    bEmailAdress.textContent = emailAdrStorVar;
+}
 
-// window.onpopstate = function(e) {
-//     sessionStorage.removeItem('emailAdrStor');
-// }
 
 
 
