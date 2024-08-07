@@ -35,7 +35,7 @@ body {
 
 .illustration {
     height: 285px;
-    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    background-image: url("/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-mobile.svg");
     background-size: cover;
     border-radius: 0 0 10px 10px;
 }
@@ -210,7 +210,7 @@ button:hover {
     }
 
     .illustration {
-        background-image: url("assets/images/illustration-sign-up-desktop.svg");
+        background-image: url("/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-desktop.svg");
         order: 1;
         width: 55%;
         height: 600px;
