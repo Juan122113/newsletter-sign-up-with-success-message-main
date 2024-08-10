@@ -210,9 +210,9 @@ button:hover {
         width: 57.8rem;
         max-width: 90%;
         display: flex;
-        padding: 1.4rem 1.2rem 1.4rem 2.5rem;
+        padding: 1.42rem 1.2rem 1.42rem 2.5rem;
         background-color: var(--White);
-        border-radius: 40px;
+        border-radius: 35px;
 
     }
 
@@ -220,23 +220,26 @@ button:hover {
         background-image: url("../images/illustration-sign-up-desktop.svg");
         order: 1;
         width: 55%;
-        height: 600px;
+        height: auto;
         border-radius: 10px;
+        /* margin: 0.2em 0; */
     }
 
     section {
-        padding: 2rem 4rem 0 1.5rem;
+        padding: 1.5rem 4rem 4rem 1.5rem;
     }
 
     h1 {
         font-size: 3.35rem;
         padding-top: 2.2rem;
+        position: relative;
+        top: 2%;
     }
 
     .p-Join {
         padding: 0;
         position: relative;
-        top: 4%;
+        top: 6%;
         
     }
 
@@ -245,9 +248,50 @@ button:hover {
         top: 7%;
     }
 
+    .img-Product {
+        /* bottom: -100px; */
+        top: 0.7em;
+    }
+
+    .p-Product {
+        bottom: 0.1em;
+        position: relative;
+    }
+
+    .img-Measuring {
+        /* bottom: -100px; */
+        top: 0.1em;
+    }
+
+    .p-Measuring {
+        position: relative;
+        /* top: 1%; */
+        bottom: 0.4em;
+    }
+
+    .img-And {
+        top: -0.1em;
+        /* bottom: 0.5em; */
+    }
+
+    .p-And {
+        position: relative;
+        bottom: 0.5em;
+    }
+
     form {
         position: relative;
-        top: 7%;
+        top: 6.5%;
+    }
+
+    label {
+        bottom: 0.3em;
+        position: relative;
+    }
+
+    input {
+        bottom: 0.3em;
+        position: relative;
     }
 
     .attribution {
