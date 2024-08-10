@@ -51,33 +51,40 @@ h1 {
 }
 
 .p-Join {
-    padding-top: 0.5em;
+    padding-top: 1.5em;
     line-height: 1.4em;
 }
 
 .list {
     display: flex;
+    /* padding-top: 1.5em; */
+    /* position: relative; */
 }
 
 .list p {
-    margin: 0.7em 0 0 1em;
+    margin: 0em 0 0 1em;
     line-height: 1.4em;
 }
 
 .img-Product {
     position: relative;
-    bottom: 7px;
+    /* bottom: 15em; */
     right: 0.4%;
+}
+
+.p-Product {
+    padding-top: 1.5em;
 }
 
 .img-Measuring {
     position: relative;
-    bottom: 6px;
+    bottom: 0.4em;
+    /* top: -150px; */
     right: 1px;
 }
 
 .p-Measuring {
-    padding-top: 0.1em;
+    padding-top: 1em;
 }
 
 .img-And {
@@ -87,7 +94,7 @@ h1 {
 }
 
 .p-And {
-    padding-top: 0.1em;
+    padding-top: 0.8em;
 }
 
 form {
@@ -179,7 +186,7 @@ button:hover {
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media (min-width: 375px) {
+@media (min-width: 376px) {
 
     .img-Product {
         top: 5px;
