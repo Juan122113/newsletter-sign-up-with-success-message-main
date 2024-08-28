@@ -112,21 +112,31 @@ label {
     display: none;
 }
 
-input {
+#email-form {
     height: 3.25rem;
     border: solid 1px var(--Grey);
+    border-color: var(--Grey) !important; 
     border-radius: 8px;
     padding-left: 1.4rem;
     cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input::placeholder {
     font-size: 1.02rem;
-    color: var(--Charcoal-Grey);
+    color: var(--Grey);
 }
 
 input:focus {
     outline: none;
+    border-color: var(--Grey);
+}
+
+.form-container input {
+    border-color: var(--Grey);
 }
 
 /* Estilos para anular el autocompletado

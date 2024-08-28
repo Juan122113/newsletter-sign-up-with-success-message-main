@@ -16,8 +16,8 @@ emailForm.addEventListener("invalid", (e) => {
 emailForm.addEventListener('focus', function() {
     console.log('El campo de email tiene el foco.');
     bValid.style.display = "none";
-    emailForm.style.borderColor = "var(--Grey)";
     emailForm.style.color = "var(--Dark-Slate-Grey)";
+    emailForm.style.borderColor = "var(--Grey)";
     emailForm.style.backgroundColor = "white";
 });
 
