@@ -4,7 +4,12 @@ let button = document.getElementById("button");
 const bValid = document.getElementById("b-Valid-id");
 let bValidDisplay = bValid.getAttribute("display");
 let a;
+// let b;
 // let bValidStyle = window.getComputedStyle(bValid);
+
+const events = ['focus', 'invalid'];
+
+// console.log(emailForm.event.type);
 
 const emailFormStyles = {
     invl: {
@@ -21,58 +26,78 @@ const emailFormStyles = {
     }
 }
 
+events.forEach((event) => {
+    emailForm.addEventListener(event, function() {
+        const isFocus = event === "focus";
+        console.log(isFocus)
+    })
+})
+
 function toggleStyles(emailFormEvent) {
     const currentStyle = emailFormEvent ? styles.focus : styles.invalid;
 }
 
-function checkingEmailFormEvent(emailForm) {
-    const  emailFormEvent = emailForm.event.type === "focus";
-    toggleStyles(emailFormEvent)
+// function checkingEmailFormEvent(emailForm) {
+//     const  emailFormEvent = emailForm.event.type === "focus";
+//     toggleStyles(emailFormEvent)
 
-}
-
-emailForm.addEventListener("invalid", (e) => {
-    bValid.style.display = "block";
-    emailForm.style.borderColor = "var(--Tomato)";
-    emailForm.style.color = "var(--Tomato)";
-    emailForm.style.backgroundColor = "hsla(4, 100%, 67%, 0.170)";
-})
-
-for (let item in emailFormStyles) {
+// }
+// for (b in emailFormStyles.invl) {
     
-}
+// }
+
+// function invalidStyles(b, emailFormStyles) {
+//     bValid.style.display = "block";
+//     emailForm.style[b] = emailFormStyles.invl[b];
+// }
+
+// emailForm.addEventListener('invalid', invalidStyles(b, emailFormStyles));
+emailForm.addEventListener('invalid', (e) => {
+    bValid.style.display = "block";
+    emailForm.style[a] = emailFormStyles.invl[a];
+
+    // emailForm.style.borderColor = "var(--Tomato)";
+    // emailForm.style.color = "var(--Tomato)";
+    // emailForm.style.backgroundColor = "hsla(4, 100%, 67%, 0.170)";
+});
+
+    
+
+
 for (a in emailFormStyles.foc) {
     // console.log(emailFormStyles.attention);
     // console.log(a);
 }
 
-function focusState(a, emailFormStyles) {
+// function focusStyles(a, emailFormStyles) {
+//     // console.log(a);
+//     // for (let a in emailFormStyles.attention) {
+//     //     console.log(emailFormStyles.attention);
+//     //     console.log(a);
+//     // }
+//     bValid.style.display = "none";
+//     // emailForm.style.color = "var(--Dark-Slate-Grey)";
+//     // emailForm.style.borderColor = "var(--Grey)";
+//     // emailForm.style.backgroundColor = "white";
+//     emailForm.style[a] = emailFormStyles.foc[a];
+// }
+
+// emailForm.addEventListener('focus', focusStyles(a, emailFormStyles));
+
+emailForm.addEventListener('focus', function() {
     // console.log(a);
-    // for (let a in emailFormStyles.attention) {
-    //     console.log(emailFormStyles.attention);
-    //     console.log(a);
-    // }
+    // console.log('El campo de email tiene el foco.');
     bValid.style.display = "none";
+    emailForm.style[a] = emailFormStyles.foc[a];
+
     // emailForm.style.color = "var(--Dark-Slate-Grey)";
     // emailForm.style.borderColor = "var(--Grey)";
     // emailForm.style.backgroundColor = "white";
-    emailForm.style[a] = emailFormStyles.foc[a];
-}
 
-emailForm.addEventListener('focus', focusState(a, emailFormStyles));
-
-// emailForm.addEventListener('focus', function(a) {
-//     console.log(a);
-//     // console.log('El campo de email tiene el foco.');
-//     bValid.style.display = "none";
-//     emailForm.style.color = "var(--Dark-Slate-Grey)";
-//     emailForm.style.borderColor = "var(--Grey)";
-//     emailForm.style.backgroundColor = "white";
-
-//     // for (let a in emailFormStyles.attention) {
-//     //     console.log(emailFormStyles[attention]);
-//     // }
-// });
+    // for (let a in emailFormStyles.attention) {
+    //     console.log(emailFormStyles[attention]);
+    // }
+});
 
 form.addEventListener('submit', function(event) {
     
@@ -88,7 +113,7 @@ form.addEventListener('submit', function(event) {
         window.location.href = "success.html"
       } 
 
-    checkingEmailFormEvent(emailForm)
+    // checkingEmailFormEvent(emailForm)
 
 })
 
