@@ -4,7 +4,7 @@ let button = document.getElementById("button");
 const bValid = document.getElementById("b-Valid-id");
 let bValidDisplay = bValid.getAttribute("display");
 let a;
-// let b;
+let b;
 // let bValidStyle = window.getComputedStyle(bValid);
 
 const events = ['focus', 'invalid'];
@@ -12,26 +12,37 @@ const events = ['focus', 'invalid'];
 // console.log(emailForm.event.type);
 
 const emailFormStyles = {
-    invl: {
+    invalid: {
         borderColor: "var(--Tomato)",
         color: "var(--Tomato)",
-        backgroundColor: "hsla(4, 100%, 67%, 0.170)",
+        backgroundColor: "hsla(4, 100%, 67%, 0.170)"
         //bValid: 
     },
-    foc: {
+    focus: {
         borderColor: "var(--Grey)",
         color: "var(--Dark-Slate-Grey)",
-        backgroundColor: "white",
+        backgroundColor: "white"
         //bValid:
     }
 }
 
-events.forEach((event) => {
-    emailForm.addEventListener(event, function() {
-        const isFocus = event === "focus";
-        console.log(isFocus)
-    })
-})
+bValidStyles = {
+    invl: "block",
+    foc: "none"
+}
+
+// events.forEach((event) => {
+//     emailForm.addEventListener(event, function() {
+//         const isFocus = event === "focus";
+//         const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
+//         for (b in currentStyle) {
+//             emailForm.style[b] = emailFormStyles[event[a]];
+//         }
+//         console.log(isFocus);
+//         console.log(currentStyle);
+//         console.log(event);
+//     })
+// })
 
 function toggleStyles(emailFormEvent) {
     const currentStyle = emailFormEvent ? styles.focus : styles.invalid;
@@ -54,7 +65,7 @@ function toggleStyles(emailFormEvent) {
 // emailForm.addEventListener('invalid', invalidStyles(b, emailFormStyles));
 emailForm.addEventListener('invalid', (e) => {
     bValid.style.display = "block";
-    emailForm.style[a] = emailFormStyles.invl[a];
+    emailForm.style[a] = emailFormStyles.invalid[a];
 
     // emailForm.style.borderColor = "var(--Tomato)";
     // emailForm.style.color = "var(--Tomato)";
@@ -64,7 +75,7 @@ emailForm.addEventListener('invalid', (e) => {
     
 
 
-for (a in emailFormStyles.foc) {
+for (a in emailFormStyles.focus) {
     // console.log(emailFormStyles.attention);
     // console.log(a);
 }
@@ -85,10 +96,10 @@ for (a in emailFormStyles.foc) {
 // emailForm.addEventListener('focus', focusStyles(a, emailFormStyles));
 
 emailForm.addEventListener('focus', function() {
-    // console.log(a);
-    // console.log('El campo de email tiene el foco.');
+    console.log(a);
+    console.log('El campo de email tiene el foco.');
     bValid.style.display = "none";
-    emailForm.style[a] = emailFormStyles.foc[a];
+    emailForm.style[a] = emailFormStyles.focus[a];
 
     // emailForm.style.color = "var(--Dark-Slate-Grey)";
     // emailForm.style.borderColor = "var(--Grey)";
