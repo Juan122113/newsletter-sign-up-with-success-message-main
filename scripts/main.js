@@ -12,13 +12,13 @@ const events = ['focus', 'invalid'];
 // console.log(emailForm.event.type);
 
 const emailFormStyles = {
-    invalid: {
+    "invalid": {
         borderColor: "var(--Tomato)",
         color: "var(--Tomato)",
         backgroundColor: "hsla(4, 100%, 67%, 0.170)"
         //bValid: 
     },
-    focus: {
+    "focus": {
         borderColor: "var(--Grey)",
         color: "var(--Dark-Slate-Grey)",
         backgroundColor: "white"
@@ -31,18 +31,27 @@ bValidStyles = {
     foc: "none"
 }
 
-// events.forEach((event) => {
-//     emailForm.addEventListener(event, function() {
-//         const isFocus = event === "focus";
-//         const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
-//         for (b in currentStyle) {
-//             emailForm.style[b] = emailFormStyles[event[a]];
-//         }
-//         console.log(isFocus);
-//         console.log(currentStyle);
-//         console.log(event);
-//     })
-// })
+events.forEach((evnt) => {
+    emailForm.addEventListener(evnt, function() {
+        const isFocus = evnt === "focus";
+        const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
+        for (b in currentStyle) {
+            console.log("b:", b);
+            emailForm.style[b] = emailFormStyles[evnt[b]];
+        }
+        console.log(isFocus);
+        console.log(currentStyle);
+        console.log("evnt:", evnt);
+        console.log(typeof evnt);
+        console.log(emailForm.style[b]);
+        console.log(emailFormStyles[evnt[b]]);
+        console.log(evnt.b);
+        
+        console.log(emailFormStyles);
+        console.log(emailFormStyles[evnt]);
+        
+    })
+})
 
 function toggleStyles(emailFormEvent) {
     const currentStyle = emailFormEvent ? styles.focus : styles.invalid;
@@ -63,14 +72,15 @@ function toggleStyles(emailFormEvent) {
 // }
 
 // emailForm.addEventListener('invalid', invalidStyles(b, emailFormStyles));
-emailForm.addEventListener('invalid', (e) => {
-    bValid.style.display = "block";
-    emailForm.style[a] = emailFormStyles.invalid[a];
 
-    // emailForm.style.borderColor = "var(--Tomato)";
-    // emailForm.style.color = "var(--Tomato)";
-    // emailForm.style.backgroundColor = "hsla(4, 100%, 67%, 0.170)";
-});
+// emailForm.addEventListener('invalid', (e) => {
+//     bValid.style.display = "block";
+//     emailForm.style[a] = emailFormStyles.invalid[a];
+
+//     // emailForm.style.borderColor = "var(--Tomato)";
+//     // emailForm.style.color = "var(--Tomato)";
+//     // emailForm.style.backgroundColor = "hsla(4, 100%, 67%, 0.170)";
+// });
 
     
 
@@ -95,20 +105,20 @@ for (a in emailFormStyles.focus) {
 
 // emailForm.addEventListener('focus', focusStyles(a, emailFormStyles));
 
-emailForm.addEventListener('focus', function() {
-    console.log(a);
-    console.log('El campo de email tiene el foco.');
-    bValid.style.display = "none";
-    emailForm.style[a] = emailFormStyles.focus[a];
+// emailForm.addEventListener('focus', function() {
+//     console.log(a);
+//     console.log('El campo de email tiene el foco.');
+//     bValid.style.display = "none";
+//     emailForm.style[a] = emailFormStyles.focus[a];
 
-    // emailForm.style.color = "var(--Dark-Slate-Grey)";
-    // emailForm.style.borderColor = "var(--Grey)";
-    // emailForm.style.backgroundColor = "white";
+//     // emailForm.style.color = "var(--Dark-Slate-Grey)";
+//     // emailForm.style.borderColor = "var(--Grey)";
+//     // emailForm.style.backgroundColor = "white";
 
-    // for (let a in emailFormStyles.attention) {
-    //     console.log(emailFormStyles[attention]);
-    // }
-});
+//     // for (let a in emailFormStyles.attention) {
+//     //     console.log(emailFormStyles[attention]);
+//     // }
+// });
 
 form.addEventListener('submit', function(event) {
     
