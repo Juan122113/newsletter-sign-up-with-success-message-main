@@ -129,13 +129,13 @@ form.addEventListener('submit', function(event) {
     
     event.preventDefault();
     
-    let emailValue = emailForm.value;
+    // let emailValue = emailForm.value;
     // console.log(emailValue);
 
     if (emailForm.checkValidity()) {
         console.log("true");
-        sessionStorage.setItem('emailAdressStorage', emailValue);
-        console.log(emailValue);
+        sessionStorage.setItem('emailAdressStorage', emailForm.value);
+        // console.log(emailValue);
         window.location.href = "success.html"
       } 
 
