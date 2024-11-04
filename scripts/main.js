@@ -125,21 +125,48 @@ for (let itemA in emailFormStyles) {
 //     // }
 // });
 
+function windowLocation() {
+    window.location.href = "success.html";
+}
+
+function storageEmailFormValue(emailForm) {
+    sessionStorage.setItem('emailAdressStorage', emailForm.value);
+    windowLocation();
+}
+
+function checkValidityEmailForm() {
+    if (emailForm.checkValidity()) {
+        console.log("true");
+        storageEmailFormValue(emailForm)
+        // sessionStorage.setItem('emailAdressStorage', emailForm.value);
+        // console.log(emailValue);
+        // window.location.href = "success.html"
+      } 
+}
+
+// function preventDefaultEmailForm(e) {
+//     e.preventDefault();
+//     checkValidity();
+// }
+
+// form.addEventListener('submit', preventDefaultEmailForm(e));
+
 form.addEventListener('submit', function(event) {
     
     event.preventDefault();
+    checkValidityEmailForm();
     
-    // let emailValue = emailForm.value;
-    // console.log(emailValue);
+//     // let emailValue = emailForm.value;
+//     // console.log(emailValue);
 
-    if (emailForm.checkValidity()) {
-        console.log("true");
-        sessionStorage.setItem('emailAdressStorage', emailForm.value);
-        // console.log(emailValue);
-        window.location.href = "success.html"
-      } 
+//     if (emailForm.checkValidity()) {
+//         console.log("true");
+//         sessionStorage.setItem('emailAdressStorage', emailForm.value);
+//         // console.log(emailValue);
+//         window.location.href = "success.html"
+//       } 
 
-    // checkingEmailFormEvent(emailForm)
+//     // checkingEmailFormEvent(emailForm)
 
 })
 
