@@ -6,6 +6,7 @@ const bValid = document.getElementById("b-Valid-id");
 // let a;
 // let item;
 // let bValidStyle = window.getComputedStyle(bValid);
+// let itemA;
 
 // const events = ['focus', 'invalid'];
 
@@ -31,31 +32,69 @@ bValidStyles = {
     focus: "none"
 }
 
-// events.forEach((evnt) => {
+function changingBValidStyles(itemA) {
+    bValid.style.display = bValidStyles[itemA];
+}
+
+function changingEmailFormStyles(currentStyle, itemA) {
+    for (let itemB in currentStyle) {
+        
+        emailForm.style[itemB] = currentStyle[itemB];
+    }
+    changingBValidStyles(itemA);
+}
+
+function wichEvent(isFocus, itemA) {
+    const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
+    changingEmailFormStyles(currentStyle, itemA);
+}
+
+// function isInFocus(itemA) {
+//     const isFocus = itemA === "focus";
+//     console.log(isFocus);
+//     wichEvent(isFocus, itemA);
+// }
+
 for (let itemA in emailFormStyles) {
     emailForm.addEventListener(itemA, function() {
         const isFocus = itemA === "focus";
-        const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
-        for (let itemB in currentStyle) {
-            console.log("b:", itemA);
-            console.log(emailFormStyles[itemA]);
-            emailForm.style[itemB] = currentStyle[itemB];
-        }
-        bValid.style.display = bValidStyles[itemA];
         console.log(isFocus);
-        console.log("currentStyle:", currentStyle);
-        console.log("currentStyle[b]:", currentStyle[itemA]);
-        console.log("evnt:", itemA);
-        console.log(typeof itemA);
-        console.log(emailForm.style[itemA]);
-        
-        console.log("evnt[b]:", itemA);
-        
-        console.log(emailFormStyles);
-        console.log(emailFormStyles[itemA]);
-        
-    })
+        wichEvent(isFocus, itemA);
+    });
+    console.log(itemA);
 }
+
+
+// for (let itemA in emailFormStyles) {
+//     emailForm.addEventListener(itemA, isInFocus(itemA));
+//     console.log(itemA);
+// }
+
+// events.forEach((evnt) => {
+// for (let itemA in emailFormStyles) {
+//     emailForm.addEventListener(itemA, function() {
+//         const isFocus = itemA === "focus";
+//         const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
+//         for (let itemB in currentStyle) {
+//             console.log("b:", itemA);
+//             console.log(emailFormStyles[itemA]);
+//             emailForm.style[itemB] = currentStyle[itemB];
+//         }
+//         bValid.style.display = bValidStyles[itemA];
+//         console.log(isFocus);
+//         console.log("currentStyle:", currentStyle);
+//         console.log("currentStyle[b]:", currentStyle[itemA]);
+//         console.log("evnt:", itemA);
+//         console.log(typeof itemA);
+//         console.log(emailForm.style[itemA]);
+        
+//         console.log("evnt[b]:", itemA);
+        
+//         console.log(emailFormStyles);
+//         console.log(emailFormStyles[itemA]);
+        
+//     })
+// }
 // })
 
 // function toggleStyles(emailFormEvent) {
@@ -168,6 +207,6 @@ form.addEventListener('submit', function(event) {
 
 //     // checkingEmailFormEvent(emailForm)
 
-})
+});
 
 
