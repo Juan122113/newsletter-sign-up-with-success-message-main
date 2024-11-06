@@ -32,21 +32,20 @@ bValidStyles = {
     focus: "none"
 }
 
-function changingBValidStyles(itemA) {
+function changingBValidStyles(itemA, bValid, bValidStyles) {
     bValid.style.display = bValidStyles[itemA];
 }
 
-function changingEmailFormStyles(currentStyle, itemA) {
+function changingEmailFormStyles(currentStyle, itemA, emailForm) {
     for (let itemB in currentStyle) {
-        
         emailForm.style[itemB] = currentStyle[itemB];
     }
-    changingBValidStyles(itemA);
+    changingBValidStyles(itemA, bValid, bValidStyles);
 }
 
-function wichEvent(isFocus, itemA) {
+function wichEvent(isFocus, itemA, emailFormStyles) {
     const currentStyle = isFocus ? emailFormStyles.focus : emailFormStyles.invalid;
-    changingEmailFormStyles(currentStyle, itemA);
+    changingEmailFormStyles(currentStyle, itemA, emailForm);
 }
 
 // function isInFocus(itemA) {
@@ -59,7 +58,7 @@ for (let itemA in emailFormStyles) {
     emailForm.addEventListener(itemA, function() {
         const isFocus = itemA === "focus";
         console.log(isFocus);
-        wichEvent(isFocus, itemA);
+        wichEvent(isFocus, itemA, emailFormStyles);
     });
     console.log(itemA);
 }
@@ -173,7 +172,7 @@ function storageEmailFormValue(emailForm) {
     windowLocation();
 }
 
-function checkValidityEmailForm() {
+function checkValidityEmailForm(emailForm) {
     if (emailForm.checkValidity()) {
         console.log("true");
         storageEmailFormValue(emailForm)
@@ -193,7 +192,7 @@ function checkValidityEmailForm() {
 form.addEventListener('submit', function(event) {
     
     event.preventDefault();
-    checkValidityEmailForm();
+    checkValidityEmailForm(emailForm);
     
 //     // let emailValue = emailForm.value;
 //     // console.log(emailValue);
