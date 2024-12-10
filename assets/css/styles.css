@@ -135,10 +135,6 @@ input:focus {
     border-color: var(--Grey);
 }
 
-.form-container input {
-    border-color: var(--Grey);
-}
-
 /* Estilos para anular el autocompletado
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
